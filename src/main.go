@@ -4,7 +4,7 @@ import (
 	"embed"
 	"html/template"
 
-	"github.com/anfego22/cyborgnerd/cmd"
+	"github.com/anfego22/cyborgnerd/cmd/api"
 )
 
 //go:embed templates/*
@@ -12,6 +12,7 @@ var content embed.FS
 
 func main() {
 	tmpl := template.Must(template.ParseFS(content, "templates/*.html"))
-	cn := cmd.Server{Tmpl: tmpl}
-	cn.Start()
+	cn := api.Server{Tmpl: tmpl}
+	cn.Start("8080")
+
 }
