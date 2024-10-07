@@ -1,18 +1,17 @@
 package main
 
 import (
+	"embed"
 	"html/template"
-	"net/http"
+
+	"github.com/anfego22/cyborgnerd/cmd"
 )
 
-var tmpl *template.Template
-
-func hello(w http.ResponseWriter, r *http.Request) {
-	tmpl.ExecuteTemplate(w, "hello-world", nil)
-}
+//go:embed templates/*
+var content embed.FS
 
 func main() {
-	tmpl = template.Must(template.ParseGlob("templates/*.html"))
-	http.HandleFunc("/", hello)
-	http.ListenAndServe(":8080", nil)
+	tmpl := template.Must(template.ParseFS(content, "templates/*.html"))
+	cn := cmd.Server{Tmpl: tmpl}
+	cn.Start()
 }
