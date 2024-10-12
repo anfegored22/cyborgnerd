@@ -3,4 +3,4 @@ tw:
 dev:
 	go run .
 build:
-	tailwindcss -o static/output.css --minify && go build . app
+	tailwindcss -o static/output.css --minify && go build .
