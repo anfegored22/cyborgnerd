@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes spriteAnimation {
+    from { background-position: 0 0; }
+    to { background-position: -1350px 0; } /* Adjust based on the total width of the sprite sheet */
+  }
+  
+  /* Sprite and animation classes */
+  .sprite {
+    width: 270px;
+    height: 270px;
+    background-image: url('/static/img/working-cat.png');
+    background-repeat: no-repeat;
+  }
+  
+  .animate-sprite {
+    animation: spriteAnimation 1s steps(5) infinite; /* Adjust steps(5) to match the number of frames */
+  }

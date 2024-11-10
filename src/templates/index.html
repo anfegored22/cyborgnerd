@@ -1,6 +1,7 @@
 {{define "hello-world"}}
 <!DOCTYPE html>
 <html lang="en" class="font-mono text-white bg-black">
+<script src="static/wasm_exec.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +13,9 @@
         <div class="max-w-[400px]">
             <img src="/static/img/Logo.png">
         </div>
-        <div class="m-5">
-            <p>Comming soon</p>
-        </div>
+        <div class="sprite animate-sprite"></div>
     </section>
+
 </body>
 </html>
 {{end}}

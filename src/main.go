@@ -18,5 +18,4 @@ func main() {
 	tmpl := template.Must(template.ParseFS(content, "templates/*.html"))
 	cn := api.Server{Tmpl: tmpl}
 	cn.Start("8080")
-
 }
