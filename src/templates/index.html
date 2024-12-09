@@ -1,21 +1,51 @@
 {{define "hello-world"}}
 <!DOCTYPE html>
 <html lang="en" class="font-mono text-white bg-black">
-<script src="static/wasm_exec.js"></script>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/output.css">
+  <script src="static/wasm_exec.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="static/js/htmx.js"></script>
+    <link rel="stylesheet" href="/static/output.css" />
     <title>CN</title>
-</head>
-<body>
-    <section class="flex flex-col justify-center items-center w-full min-h-[100dvh] text-center">
-        <div class="max-w-[400px]">
-            <img src="/static/img/Logo.png">
+  </head>
+  <body>
+    <section
+      class="flex flex-col justify-center items-center w-full min-h-[100dvh] text-center space-y-6"
+    >
+      <div id="root" class="max-w-[400px]">
+        <img src="/static/img/Logo.png" />
+        <div class="flex justify-between space-x-4">
+          <button
+            hx-target="#root"
+            hx-get="/dev-path"
+            hx-swap="innerHTML"
+            class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm"
+          >
+            The Dev Path
+          </button>
+          <button
+            hx-target="#root"
+            hx-get="/artist-path"
+            hx-swap="innerHTML"
+            class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm"
+          >
+            The Artist Path
+          </button>
         </div>
-        <div class="sprite animate-sprite"></div>
+      </div>
     </section>
-
-</body>
+  </body>
 </html>
+{{end}} {{define "construction"}}
+<div class="flex flex-col justify-center items-center space-y-4">
+  <p>
+    We are working day and night; unfortunately, this page is under
+    construction!
+  </p>
+  <div class="sprite animate-sprite"></div>
+  <div class="flex justify-between items-center">
+    <a href="/" class="underline">Home</a>
+  </div>
+</div>
 {{end}}
