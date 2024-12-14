@@ -1,18 +1,23 @@
 {{define "artist-intro"}}
-<p>
-  Hello! My name is Natalia, and I'm an artist. This is my first time working on
-  a video game, and I want to document all my progress here. For me, it's not
-  just about the final product but also about sharing the journey of learning. I
-  started with an
-  <a
-    class="underline font-bold"
-    href="https://www.udemy.com/course/learn-professional-2d-game-asset-graphic-design-in-photoshop/"
-    >Udemy course</a
-  >, and here are my notes!
-</p>
-<div class="space-y-4">
-  {{range .}}
-  <img src="/static/art/{{.}}" class="w-full rounded shadow-lg mt-4" />
-  {{end}}
+<div id="root" class="max-w-[400px] m-4">
+  <p>
+    Hello! My name is Natalia, and I'm an artist. This is my first time working
+    on a video game, and I want to document all my progress here. For me, it's
+    not just about the final product but also about sharing the journey of
+    learning. I started with an
+    <a
+      class="underline font-bold"
+      href="https://www.udemy.com/course/learn-professional-2d-game-asset-graphic-design-in-photoshop/"
+      >Udemy course</a
+    >, and here are my notes!
+  </p>
+  <div class="space-y-4">
+    {{range .}}
+    <img src="/static/art/{{.}}" class="w-full rounded shadow-lg mt-4" />
+    {{end}}
+  </div>
+  <div class="m-4 flex justify-end">
+    <a class="underline font-bold" href="/">Back</a>
+  </div>
 </div>
 {{end}}
