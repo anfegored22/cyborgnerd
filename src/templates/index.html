@@ -18,19 +18,19 @@
         <div class="flex justify-between space-x-4">
           <button
             hx-target="#root"
-            hx-get="/dev-path"
-            hx-swap="innerHTML"
-            class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm"
-          >
-            The Dev Path
-          </button>
-          <button
-            hx-target="#root"
             hx-get="/artist-path"
             hx-swap="innerHTML"
             class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm"
           >
             The Artist Path
+          </button>
+          <button
+            hx-target="#root"
+            hx-get="/dev-path"
+            hx-swap="innerHTML"
+            class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm"
+          >
+            The Dev Path
           </button>
         </div>
       </div>
@@ -39,10 +39,7 @@
 </html>
 {{end}} {{define "construction"}}
 <div class="flex flex-col justify-center items-center space-y-4">
-  <p>
-    We are working day and night; unfortunately, this page is under
-    construction!
-  </p>
+  <p>This page is under construction!</p>
   <div class="sprite animate-sprite"></div>
   <div class="flex justify-between items-center">
     <a href="/" class="underline">Home</a>
