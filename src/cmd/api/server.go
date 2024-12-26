@@ -25,8 +25,10 @@ func (s *Server) ToStandar(h HandlerWithError) http.HandlerFunc {
 func (s *Server) Start(port string) {
 	http.HandleFunc("/", s.ToStandar(s.Hello))
 	http.HandleFunc("/artist-path", s.ToStandar(s.ArtistPath))
-	http.HandleFunc("/dev-path", s.ToStandar(s.DevPath))
+	http.HandleFunc("/udemy-notes", s.ToStandar(s.UdemyNotes))
+	http.HandleFunc("/sketches", s.ToStandar(s.Sketches))
 
+	http.HandleFunc("/dev-path", s.ToStandar(s.DevPath))
 	fmt.Printf("Serving on http://localhost:%s\n", port)
 	http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 }

@@ -14,20 +14,37 @@ func (s *Server) Construction(w http.ResponseWriter, r *http.Request) error {
 }
 
 func (s *Server) UdemyNotes(w http.ResponseWriter, r *http.Request) error {
+	pages := ImagesPath("/static/art", 1, 9)
+	data := struct {
+		Title string
+		Pages []string
+	}{Title: "Udemy Notes", Pages: pages}
+	return s.Tmpl.ExecuteTemplate(w, "card-expanded", data)
+}
+
+func (s *Server) Sketches(w http.ResponseWriter, r *http.Request) error {
+	pages := ImagesPath("/static/tima", 0, 10)
+	data := struct {
+		Title string
+		Pages []string
+	}{Title: "Sketches", Pages: pages}
+	return s.Tmpl.ExecuteTemplate(w, "card-expanded", data)
+}
+
+func ImagesPath(path string, i0, n int) []string{
 	var pages []string
-	i := 1
-	for i < 9 {
-		pages = append(pages, fmt.Sprintf("/static/art/page_%d.webp", i))
+	i := i0
+	for i < n {
+		pages = append(pages, fmt.Sprintf("%s/page_%d.webp", path, i))
 		i++
 	}
-	return s.Tmpl.ExecuteTemplate(w, "udemy-notes", pages)
+	return pages
 }
 
 func (s *Server) ArtistPath(w http.ResponseWriter, r *http.Request) error {
 	cc := []InfoCard{
 		{Title: "Udemy Notes", Description: "Detailed notes from the Udemy course, capturing every essential concept and technique.", URL: "/udemy-notes"},
 		{Title: "Sketches", Description: "A collection of early video game concept art and rough drafts.", URL: "/sketches"},
-		{Title: "Schedule", Description: "An overview of the planned timeline and milestones for the project.", URL: "/schedule"},
 	}
 	return s.Tmpl.ExecuteTemplate(w, "artist-path", cc)
 }
