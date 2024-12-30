@@ -10,30 +10,32 @@
     journey.
   </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-4">
+<div
+  class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 m-4"
+>
   {{range .}} {{template "card" .}} {{end}}
 </div>
 <a class="hover:cursor-pointer underline" href="/">Home</a>
 {{end}} {{define "card"}}
 <div
-  class="font-mono text-white bg-black shadow-lg rounded-lg p-4 hover:cursor-pointer hover:bg-gray-800 active:bg-gray-700 focus:outline focus:outline-2 focus:outline-gray-600 transition duration-300"
+  class="font-mono text-white lg:bg-black shadow-lg rounded-lg p-4 hover:cursor-pointer lg:hover:bg-gray-800 bg-gray-800 active:bg-gray-700 focus:outline focus:outline-2 focus:outline-gray-600 transition duration-300"
+  hx-get="{{.URL}}"
+  hx-trigger="click"
+  hx-swap="innerHTML swap:300ms"
+  hx-target="#root"
 >
   <h2 class="text-xl font-bold mb-2">{{.Title}}</h2>
   <p>{{.Description}}</p>
-  <button
-    class="mt-4 p-2 text-neon-green text-shadow-neon text-sm"
-    hx-get="{{.URL}}"
-    hx-trigger="click"
-    hx-swap="innerHTML swap:300ms"
-    hx-target="#root"
-  >
+  <button class="mt-4 p-2 text-neon-green text-shadow-neon text-sm">
     Learn More
   </button>
 </div>
 {{end}} {{define "card-expanded"}}
 <div>
-  <!--href="https://www.udemy.com/course/learn-professional-2d-game-asset-graphic-design-in-photoshop/"-->
-  <div class="flex flex-col justify-center items-center m-4 p-4">
+  <!-- Sticky header -->
+  <div
+    class="flex flex-col justify-center bg-black items-center p-4 shadow-lg sticky top-0 z-10"
+  >
     <h2 class="text-xl font-bold mb-2">{{.Title}}</h2>
     <div
       class="hover:cursor-pointer underline"
@@ -45,6 +47,7 @@
       Back
     </div>
   </div>
+  <!-- Images -->
   <div class="space-y-4">
     {{range .Pages}}
     <img loading="lazy" src="{{.}}" class="w-full rounded shadow-lg mt-4" />
