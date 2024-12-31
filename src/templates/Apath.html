@@ -21,6 +21,7 @@
   class="font-mono text-white lg:bg-black shadow-lg rounded-lg p-4 hover:cursor-pointer lg:hover:bg-gray-800 bg-gray-800 active:bg-gray-700 focus:outline focus:outline-2 focus:outline-gray-600 transition duration-300"
   hx-get="{{.URL}}"
   hx-trigger="click"
+  hx-push-url="{{.URL}}"
   hx-swap="innerHTML swap:300ms"
   hx-target="#root"
 >
@@ -32,26 +33,16 @@
 </div>
 {{end}} {{define "card-expanded"}}
 <div>
-  <!-- Sticky header -->
   <div
     class="flex flex-col justify-center bg-black items-center p-4 shadow-lg sticky top-0 z-10"
   >
     <h2 class="text-xl font-bold mb-2">{{.Title}}</h2>
-    <div
-      class="hover:cursor-pointer underline"
-      hx-get="/artist-path"
-      hx-trigger="click"
-      hx-swap="innerHTML"
-      hx-target="#root"
-    >
-      Back
-    </div>
   </div>
-  <!-- Images -->
   <div class="space-y-4">
     {{range .Pages}}
     <img loading="lazy" src="{{.}}" class="w-full rounded shadow-lg mt-4" />
     {{end}}
   </div>
 </div>
-{{end}}
+{{end}} {{define "full-artist-path"}} {{template "body" "Artist Path"}}
+{{template "artist-path" .}} {{template "end-body"}} {{end}}

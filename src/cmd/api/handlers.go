@@ -46,7 +46,10 @@ func (s *Server) ArtistPath(w http.ResponseWriter, r *http.Request) error {
 		{Title: "Udemy Notes", Description: "Detailed notes from the Udemy course, capturing every essential concept and technique.", URL: "/udemy-notes"},
 		{Title: "Sketches", Description: "A collection of early video game concept art and rough drafts.", URL: "/sketches"},
 	}
-	return s.Tmpl.ExecuteTemplate(w, "artist-path", cc)
+	if r.Header.Get("HX-Request") == "true" {
+		return s.Tmpl.ExecuteTemplate(w, "artist-path", cc) 
+	}
+	return s.Tmpl.ExecuteTemplate(w, "full-artist-path", cc)
 }
 
 
