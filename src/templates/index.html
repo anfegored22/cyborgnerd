@@ -19,7 +19,7 @@
 </html>
 {{end}} {{define "hello-world"}} {{template "body" "CN"}}
 <div class="max-w-[400px] m-4">
-  <img src="/static/img/Logo.png" />
+  <img src="/static/img/Logo-animado.gif" />
   <div class="flex justify-between space-x-4">
     <button
       hx-target="#root"
@@ -40,6 +40,7 @@
       The Dev Path
     </button>
   </div>
+  {{template "welcome-notification"}}
 </div>
   {{template "end-body"}} {{end}} 
   
@@ -50,3 +51,11 @@
   </div>
   {{end}}
 </div>
+
+{{define "welcome-notification"}}
+  <div id="notification" class="notification flex flex-row justify-center items-center m-4 p-4 text-xs bg-black text-neon-green shadow-neon font-press-start animate-pulse">
+      <!--hx-delete="/" hx-trigger="every 3s" hx-swap="delete" class="border text-white">
+      !-->
+      <p>"Thanks for visiting us!"</p>
+</div>
+{{end}}

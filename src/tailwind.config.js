@@ -19,6 +19,9 @@ module.exports = {
       colors: {
         "neon-green": "#39ff14",
       },
+      fontFamily: {
+        "press-start": ['"Press Start 2P"', "cursive"],
+      },
     },
   },
   extend: {

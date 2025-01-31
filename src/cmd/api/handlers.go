@@ -52,6 +52,9 @@ func (s *Server) ArtistPath(w http.ResponseWriter, r *http.Request) error {
 	return s.Tmpl.ExecuteTemplate(w, "full-artist-path", cc)
 }
 
+func (s *Server) Welcome(w http.ResponseWriter, r *http.Request) error{
+	return s.Tmpl.ExecuteTemplate(w, "welcome-notification", nil)
+}
 
 func (s *Server) DevPath(w http.ResponseWriter, r *http.Request) error {
 	return fmt.Errorf("nothing to show yet!")
