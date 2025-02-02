@@ -27,6 +27,7 @@ func (s *Server) Start(port string) {
 	http.HandleFunc("/artist-path", s.ToStandar(s.ArtistPath))
 	http.HandleFunc("/udemy-notes", s.ToStandar(s.UdemyNotes))
 	http.HandleFunc("/sketches", s.ToStandar(s.Sketches))
+	http.HandleFunc("/assets", s.ToStandar(s.Assets))
 	http.HandleFunc("/welcome", s.ToStandar(s.Welcome))
 
 	http.HandleFunc("/dev-path", s.ToStandar(s.DevPath))
