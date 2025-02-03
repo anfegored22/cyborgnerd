@@ -17,11 +17,7 @@ func (s *Server) ToStandar(h HandlerWithError) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if e := h(w, r); e != nil {
 			slog.Error(e.Error())
-			if r.Header == "" {
-				s.Tmpl.ExecuteTemplate(w, "construction", nil)
-			} else {
-				s.Tmpl.ExecuteTemplate(w, "error", nil)
-			}
+			s.Tmpl.ExecuteTemplate(w, "error", nil)
 		}
 	}
 }
