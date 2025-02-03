@@ -19,7 +19,7 @@ func (s *Server) UdemyNotes(w http.ResponseWriter, r *http.Request) error {
 		Title string
 		Pages []string
 	}{Title: "Udemy Notes", Pages: pages}
-	return s.Tmpl.ExecuteTemplate(w, "card-expanded", data)
+	return s.Tmpl.ExecuteTemplate(w, "image-list", data)
 }
 
 func (s *Server) Sketches(w http.ResponseWriter, r *http.Request) error {
@@ -28,7 +28,7 @@ func (s *Server) Sketches(w http.ResponseWriter, r *http.Request) error {
 		Title string
 		Pages []string
 	}{Title: "Sketches", Pages: pages}
-	return s.Tmpl.ExecuteTemplate(w, "card-expanded", data)
+	return s.Tmpl.ExecuteTemplate(w, "image-list", data)
 }
 
 func ImagesPath(path string, i0, n int) []string {

@@ -28,7 +28,6 @@ func (s *Server) Start(port string) {
 	http.HandleFunc("/udemy-notes", s.ToStandar(s.UdemyNotes))
 	http.HandleFunc("/sketches", s.ToStandar(s.Sketches))
 	http.HandleFunc("/assets", s.ToStandar(s.Assets))
-	http.HandleFunc("/welcome", s.ToStandar(s.Welcome))
 
 	http.HandleFunc("/dev-path", s.ToStandar(s.DevPath))
 	fmt.Printf("Serving on http://localhost:%s\n", port)
