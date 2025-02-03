@@ -6,24 +6,20 @@
   <link rel="stylesheet" href="/static/output.css" />
   <title>{{.}}</title>
 </head>
-{{end}}
-
-  
-{{define "construction"}}
+{{end}} {{define "construction"}}
 <div class="flex flex-col justify-center items-center space-y-4">
   <p>This page is under construction!</p>
-  <img width="300px" src="/static/img/Orangecat-animado.gif">
+  <img width="300px" src="/static/img/Orangecat-animado.gif" />
 </div>
-{{end}}
-
-{{define "card"}}
+{{end}} {{define "card"}}
 <a
   class="font-mono text-white lg:bg-black shadow-lg rounded-lg p-4 hover:cursor-pointer lg:hover:bg-gray-800 bg-gray-800 active:bg-gray-700 focus:outline focus:outline-2 focus:outline-gray-600 transition duration-300"
-  href="{{.URL}}">
+  href="{{.URL}}"
+>
   <h2 class="text-xl font-bold mb-2">{{.Title}}</h2>
   <p>{{.Description}}</p>
   <button class="mt-4 p-2 text-neon-green text-shadow-neon text-sm">
     Learn More
   </button>
-</div>
+</a>
 {{end}}

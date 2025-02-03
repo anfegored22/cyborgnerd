@@ -52,10 +52,7 @@ func (s *Server) ArtistPath(w http.ResponseWriter, r *http.Request) error {
 		{Title: "Sketches", Description: "A collection of early video game concept art and rough drafts.", URL: "/sketches"},
 		{Title: "Assets", Description: "Here are all assets or logos made so far", URL: "/assets"},
 	}
-	if r.Header.Get("HX-Request") == "true" {
-		return s.Tmpl.ExecuteTemplate(w, "artist-path", cc)
-	}
-	return s.Tmpl.ExecuteTemplate(w, "full-artist-path", cc)
+	return s.Tmpl.ExecuteTemplate(w, "artist-path", cc)
 }
 
 func (s *Server) Welcome(w http.ResponseWriter, r *http.Request) error {
