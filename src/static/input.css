@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes spriteAnimationGreen {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2430px 0;
+  } /* Adjust based on the total width of the sprite sheet */
+}
+
+@keyframes spriteAnimationBlue {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1350px 0;
+    }
+}
+
+/* Sprite and animation classes */
+.sprite {
+  width: 270px;
+  height: 270px;
+  background-repeat: no-repeat;
+}
+
+.green-cat {
+    background-image: url("/static/img/working-cat-green.png");
+}
+
+.blue-cat {
+    background-image: url("/static/img/working-cat.png");
+}
+
+.animate-sprite-9 {
+  animation: spriteAnimationGreen 1s steps(9) infinite;
+}
+
+.animate-sprite-5 {
+    animation: spriteAnimationBlue 1s steps(5) infinite;
+}
