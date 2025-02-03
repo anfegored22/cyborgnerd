@@ -1,0 +1,28 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html lang="en" class="font-mono text-white bg-black">
+{{template "header" "Cyborgnerd"}}
+<body>
+    <div id="root" class="flex flex-col justify-center items-center w-full min-h-[100dvh] text-center space-y-6">
+        <div class="max-w-[400px] m-4">
+            <img src="/static/img/Logo-animado.gif" />
+            <div hx-boost="true" class="flex justify-between space-x-4">
+                <a href="/artist-path"
+                    class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm">
+                    The Artist Path
+                </a>
+                <a href="/dev-path"
+                    class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm">
+                    The Dev Path
+                </a>
+            </div>
+            <div id="notification"
+                class="notification flex flex-row justify-center items-center m-4 p-4 text-xs bg-black text-neon-green shadow-neon font-press-start animate-pulse">
+                <!--hx-delete="/" hx-trigger="every 3s" hx-swap="delete" class="border text-white">
+                  !-->
+                <p>"Thanks for visiting us!"</p>
+            </div>
+    </div>
+</body>
+</html>
+{{end}}

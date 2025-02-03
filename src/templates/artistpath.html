@@ -1,0 +1,26 @@
+{{define "artist-path"}}
+<!DOCTYPE html>
+<html lang="en" class="font-mono text-white bg-black">
+{{template "header" "Artsit Path"}}
+<body>
+    <div id="root" class="flex flex-col justify-center items-center w-full min-h-[100dvh] text-center space-y-6">
+        <div class="m-4 space-y-4">
+            <h2 class="text-xl font-bold mb-2">Hello!</h2>
+            <p>
+                My name is Natalia, and I'm an artist. This is my first time working on a
+                video game, and I want to document all my progress here.
+            </p>
+            <p>
+                For me, it's not just about the final product but also about sharing the
+                journey.
+            </p>
+        </div>
+        <div hx-boost="true" class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 m-4">
+            {{range .}} 
+                {{template "card" .}} 
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
+{{end}}

@@ -1,38 +1,4 @@
-{{define "artist-path"}}
-<div class="m-4 space-y-4">
-  <h2 class="text-xl font-bold mb-2">Hello!</h2>
-  <p>
-    My name is Natalia, and I'm an artist. This is my first time working on a
-    video game, and I want to document all my progress here.
-  </p>
-  <p>
-    For me, it's not just about the final product but also about sharing the
-    journey.
-  </p>
-</div>
-<div
-  class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 m-4"
->
-  {{range .}} {{template "card" .}} {{end}}
-</div>
-<a class="hover:cursor-pointer underline" href="/">Home</a>
-{{end}} {{define "card"}}
-<div
-  class="font-mono text-white lg:bg-black shadow-lg rounded-lg p-4 hover:cursor-pointer lg:hover:bg-gray-800 bg-gray-800 active:bg-gray-700 focus:outline focus:outline-2 focus:outline-gray-600 transition duration-300"
-  hx-get="{{.URL}}"
-  hx-trigger="click"
-  hx-push-url="{{.URL}}"
-  hx-swap="innerHTML swap:300ms"
-  hx-select="#root"
-  hx-target="#root"
->
-  <h2 class="text-xl font-bold mb-2">{{.Title}}</h2>
-  <p>{{.Description}}</p>
-  <button class="mt-4 p-2 text-neon-green text-shadow-neon text-sm">
-    Learn More
-  </button>
-</div>
-{{end}} {{define "card-expanded"}}
+ {{define "card-expanded"}}
 <div>
   <div
     class="flex flex-col justify-center bg-black items-center p-4 shadow-lg sticky top-0 z-10"
@@ -41,9 +7,8 @@
   </div>
   <div class="space-y-4">
     {{range .Pages}}
-    <img loading="lazy" src="{{.}}" class="w-full rounded shadow-lg mt-4" />
+      <img loading="lazy" src="{{.}}" class="w-full rounded shadow-lg mt-4" />
     {{end}}
   </div>
 </div>
-{{end}} {{define "full-artist-path"}} {{template "body" "Artist Path"}}
-{{template "artist-path" .}} {{template "end-body"}} {{end}}
+{{end}}

@@ -6,7 +6,7 @@ import (
 )
 
 func (s *Server) Hello(w http.ResponseWriter, r *http.Request) error {
-	return s.Tmpl.ExecuteTemplate(w, "hello-world", nil)
+	return s.Tmpl.ExecuteTemplate(w, "home", nil)
 }
 
 func (s *Server) Construction(w http.ResponseWriter, r *http.Request) error {
