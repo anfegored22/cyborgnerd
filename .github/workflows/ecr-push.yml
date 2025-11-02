@@ -43,4 +43,4 @@ jobs:
 
       - name: Deploy CDK stack (no approval)
         working-directory: cybn-stack
-        run: npx cdk deploy CybnStack--require-approval never --verbose
+        run: npx cdk deploy CybnStack --require-approval=never --verbose
