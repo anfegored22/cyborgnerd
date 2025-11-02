@@ -1,6 +1,6 @@
 # Simple multi-stage Dockerfile for the Go app
 # Build stage
-FROM golang:1.22-alpine AS build
+FROM golang:1.23.2-alpine AS build
 WORKDIR /src
 
 # Cache go dependencies
