@@ -1,0 +1,46 @@
+name: CDK Deploy (builds and publishes image asset)
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: {}
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION || 'us-east-1' }}
+
+jobs:
+  cdk-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # for OIDC
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+      
+      - name: Install CDK app dependencies
+        working-directory: cybn-stack
+        run: npm ci
+
+      - name: Build CDK app
+        working-directory: cybn-stack
+        run: npm run build
+
+      - name: Bootstrap CDK (idempotent)
+        working-directory: cybn-stack
+        run: npx cdk bootstrap
+
+      - name: Deploy CDK stack (no approval)
+        working-directory: cybn-stack
+        run: npx cdk deploy CybnStackStack --require-approval never --verbose

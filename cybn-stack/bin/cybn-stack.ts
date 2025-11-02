@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib/core';
-import { CybnStackStack } from '../lib/cybn-stack-stack';
+import * as cdk from 'aws-cdk-lib';
+import { CybnStack} from '../lib/cybn-stack';
 
 const app = new cdk.App();
-new CybnStackStack(app, 'CybnStackStack', {
+new CybnStack(app, 'CybnStackStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
