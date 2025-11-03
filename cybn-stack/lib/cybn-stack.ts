@@ -53,9 +53,11 @@ export class CybnStack extends cdk.Stack {
     });
 
     // Fargate Service behind an Application Load Balancer
-    // Look up the hosted zone for cyborgnerd.com
-    const hostedZone = route53.HostedZone.fromLookup(this, 'CybnHostedZone', {
-      domainName: 'cyborgnerd.com',
+    // Create a Route 53 public hosted zone for cyborgnerd.com
+    // Note: you still need to set these NS at your registrar (Namecheap)
+    const hostedZone = new route53.PublicHostedZone(this, 'CybnHostedZone', {
+      zoneName: 'cyborgnerd.com',
+      comment: 'Managed by CDK for cyborgnerd.com',
     });
 
     // Create an ACM certificate for the apex domain, validated via DNS in the hosted zone
@@ -97,6 +99,12 @@ export class CybnStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'ServiceUrl', {
       value: `https://cyborgnerd.com`,
       description: 'Public URL for the Fargate service via ALB and custom domain.',
+    });
+
+    // Output NS records to configure at Namecheap
+    new cdk.CfnOutput(this, 'Route53NameServers', {
+      value: cdk.Fn.join(',', hostedZone.hostedZoneNameServers ?? []),
+      description: 'Set these nameservers at your domain registrar (Namecheap).',
     });
   }
 }
