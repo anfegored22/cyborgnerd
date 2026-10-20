@@ -1,0 +1,477 @@
+{
+  "source": "portfolio.pdf",
+  "images": [
+    {
+      "page": 1,
+      "file": "page-01-image-000.png",
+      "width": 6000,
+      "height": 3375,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 1,
+      "file": "page-01-image-002.png",
+      "width": 6000,
+      "height": 3375,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 2,
+      "file": "page-02-image-004.png",
+      "width": 6000,
+      "height": 3375,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 2,
+      "file": "page-02-image-006.png",
+      "width": 6000,
+      "height": 3375,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 2,
+      "file": "page-02-image-008.jpg",
+      "width": 1161,
+      "height": 1296,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 3,
+      "file": "page-03-image-009.png",
+      "width": 2338,
+      "height": 3290,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 3,
+      "file": "page-03-image-011.png",
+      "width": 2338,
+      "height": 3290,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 3,
+      "file": "page-03-image-013.png",
+      "width": 2122,
+      "height": 1671,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 3,
+      "file": "page-03-image-015.png",
+      "width": 1995,
+      "height": 640,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 4,
+      "file": "page-04-image-017.png",
+      "width": 4778,
+      "height": 3744,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 4,
+      "file": "page-04-image-019.png",
+      "width": 4778,
+      "height": 3744,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-021.png",
+      "width": 1954,
+      "height": 2383,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-023.png",
+      "width": 1954,
+      "height": 2383,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-025.png",
+      "width": 3030,
+      "height": 3925,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-027.png",
+      "width": 3030,
+      "height": 3925,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-029.png",
+      "width": 2578,
+      "height": 1832,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 5,
+      "file": "page-05-image-031.png",
+      "width": 2618,
+      "height": 1245,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 6,
+      "file": "page-06-image-033.png",
+      "width": 4805,
+      "height": 4266,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 6,
+      "file": "page-06-image-035.png",
+      "width": 4805,
+      "height": 4266,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 7,
+      "file": "page-07-image-037.png",
+      "width": 3581,
+      "height": 2056,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 7,
+      "file": "page-07-image-039.png",
+      "width": 3581,
+      "height": 2056,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 8,
+      "file": "page-08-image-041.png",
+      "width": 3896,
+      "height": 3717,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 8,
+      "file": "page-08-image-043.png",
+      "width": 3896,
+      "height": 3717,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 8,
+      "file": "page-08-image-045.jpg",
+      "width": 1578,
+      "height": 499,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 9,
+      "file": "page-09-image-046.jpg",
+      "width": 800,
+      "height": 796,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 9,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 9,
+      "file": "page-09-image-049.jpg",
+      "width": 1600,
+      "height": 709,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 10,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 10,
+      "file": "page-10-image-052.jpg",
+      "width": 1600,
+      "height": 1591,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 11,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 11,
+      "file": "page-11-image-055.jpg",
+      "width": 1600,
+      "height": 709,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 12,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 12,
+      "file": "page-12-image-058.jpg",
+      "width": 836,
+      "height": 1362,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 12,
+      "file": "page-12-image-059.jpg",
+      "width": 640,
+      "height": 617,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 13,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 13,
+      "file": "page-13-image-062.jpg",
+      "width": 1133,
+      "height": 1599,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 14,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 14,
+      "file": "page-14-image-065.jpg",
+      "width": 417,
+      "height": 600,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 14,
+      "file": "page-14-image-066.png",
+      "width": 567,
+      "height": 270,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 15,
+      "file": "page-09-image-047.png",
+      "width": 2703,
+      "height": 3880,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 15,
+      "file": "page-15-image-069.jpg",
+      "width": 300,
+      "height": 122,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 15,
+      "file": "page-15-image-070.png",
+      "width": 643,
+      "height": 473,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-071.jpg",
+      "width": 941,
+      "height": 1109,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-072.png",
+      "width": 3098,
+      "height": 4225,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-074.png",
+      "width": 3097,
+      "height": 4225,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-076.png",
+      "width": 2265,
+      "height": 1322,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-078.png",
+      "width": 2670,
+      "height": 1094,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 16,
+      "file": "page-16-image-080.jpg",
+      "width": 1031,
+      "height": 1461,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 17,
+      "file": "page-17-image-081.jpg",
+      "width": 931,
+      "height": 1280,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 17,
+      "file": "page-16-image-072.png",
+      "width": 3098,
+      "height": 4225,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 17,
+      "file": "page-16-image-074.png",
+      "width": 3097,
+      "height": 4225,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 17,
+      "file": "page-16-image-076.png",
+      "width": 2265,
+      "height": 1322,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 17,
+      "file": "page-16-image-078.png",
+      "width": 2670,
+      "height": 1094,
+      "has_transparency": true,
+      "duplicate": true
+    },
+    {
+      "page": 17,
+      "file": "page-17-image-090.jpg",
+      "width": 1153,
+      "height": 649,
+      "has_transparency": false,
+      "duplicate": false
+    },
+    {
+      "page": 18,
+      "file": "page-18-image-091.png",
+      "width": 2798,
+      "height": 4019,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 18,
+      "file": "page-18-image-093.png",
+      "width": 2797,
+      "height": 4019,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 18,
+      "file": "page-18-image-095.png",
+      "width": 1959,
+      "height": 1529,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 18,
+      "file": "page-18-image-097.png",
+      "width": 2309,
+      "height": 946,
+      "has_transparency": true,
+      "duplicate": false
+    },
+    {
+      "page": 18,
+      "file": "page-18-image-099.jpg",
+      "width": 857,
+      "height": 850,
+      "has_transparency": false,
+      "duplicate": false
+    }
+  ]
+}

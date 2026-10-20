@@ -1,0 +1,118 @@
+[
+  {
+    "ID": "portafolio", "Title": "Tacy Borg", "Eyebrow": "Portafolio Artístico 2026", "Kind": "cover",
+    "Paragraphs": ["Portafolio"]
+  },
+  {
+    "ID": "declaracion", "Title": "Declaración", "Eyebrow": "La artista", "Kind": "statement",
+    "Paragraphs": [
+      "El oficio del artista es tomar riesgos. Entregarse al devenir del material para acercarse a un conocimiento que llega en tiempos múltiples: pasado, presente y futuro. Cada mosaico de píxel art es hecho a mano con un lenguaje artesanal y tecnológico que explora las emociones, intuiciones y recorridos mentales de un sistema humano gobernado por un mundo digital. Sobre un soporte de madera pego taches de color que han sido doblados previamente para facilitar el ensamblaje. Cada tache funciona como una unidad de color que, al integrarse con las demás, configura espirales, cuerpos, líneas, círculos y otras formas que componen la pieza final.",
+      "Tacy Borg es el nombre de autor creado para este proyecto pues une dos partes imprescindibles del mensaje: un prefijo “Ta” que es una de las sílabas del nombre Natalia (lo humano, imperfecto, lo traumado); y “cy borg” que significa organismo cibernético (lo sofisticado, lo divino, lo transhumano). En general, toda la obra de este proyecto no es más que la expresión de un organismo adaptándose a un medio concebido desde un nivel superior."
+    ],
+    "Images": [{"File": "page-02-image-008", "Alt": "Retrato de Tacy Borg"}]
+  },
+  {
+    "ID": "semblanza", "Title": "Semblanza", "Eyebrow": "La artista", "Kind": "biography",
+    "Paragraphs": ["Tacy Borg (Medellín,1988) es una artista contemporánea formada en la Universidad Javeriana de Bogotá como maestra en artes visuales con énfasis audiovisual. Su obra se enfoca en la investigación de la identidad y la memoria. Además de la convergencia de ambos en relación con el material aplicado. Materiales como los metales nobles e industriales, la madera, el papel; y medios como la fotografía y el video se destacan en su trabajo actual. Ha expuesto en escenarios nacionales e internacionales como en la exposición primavera 2026 de artistas nacionales, en el Watermill Center Foundation New York en el año 2013 y en la muestra nacional de estudiantes de la Cátedra UNESCO de Comunicación y muestra ventanas 2010."]
+  },
+  {
+    "ID": "investigacion", "Title": "Líneas de investigación", "Eyebrow": "Memoria / Identidad / Material", "Kind": "text",
+    "Columns": [
+      {"Title": "Línea conceptual", "Paragraphs": ["Memoria e identidad. Basada en la exploración de los recuerdos familiares, herencias culturales, descolonización y la construcción del yo a través del retrato."]},
+      {"Title": "Línea técnica", "Paragraphs": ["La artista fabrica piezas con metales nobles en pequeño formato, y realiza mosaicos con metales industriales pintados a mano. Practica la joyería artesanal mediante el calado, soldado, tejido, sincelado, fundición y otros. Además desarrolla su estilo de dibujo con grafito y carbón, su pintura con acuarelas, fotografías análogas experimentales, video instalación y video documental experimental."]}
+    ]
+  },
+  {
+    "ID": "curriculum", "Title": "Currículum vitae", "Eyebrow": "Trayectoria", "Kind": "resume",
+    "Columns": [
+      {"Title": "Perfil", "Paragraphs": ["Maestra en artes visuales con reconocimiento internacional en la creación de proyectos artísticos. Experiencia en docencia y creación de contenido. Conocimientos en escultura, joyería, fotografía, video, dibujo y pintura. Programas de edición como Final Cut Pro, Adobe Premiere, Photoshop; análisis pedagógico y creación de programas académicos en las artes. Competencias de creatividad, innovación y trabajo en equipo."]},
+      {"Title": "Formación", "Paragraphs": ["Pontificia Universidad Javeriana Bogotá · Artes Visuales, Colombia · 2006–2011", "La Mana Tabio · Taller de Joyería, Colombia · 2008–2011", "Fundación Gilberto Álzate Avendaño y Plataforma Bogotá · Taller “Hecho en casa o garaje”, Colombia 2010", "Escuela de Artes y Oficios Santo Domingo Bogotá · Taller “Fundición en metales”, Colombia 2011", "Escuela de Periodismo Multimedia El Tiempo Bogotá · Taller “Últimas tendencias en Fotografía con los expertos de EL TIEMPO”, Colombia 2016"]},
+      {"Title": "Premios", "Paragraphs": ["Watermill Center Foundation New York · Residencia “Laboratorio Artistas Unidos” · Estados Unidos 2013"]}
+    ]
+  },
+  {
+    "ID": "exposiciones", "Title": "Exposiciones & publicaciones", "Eyebrow": "Trayectoria", "Kind": "resume",
+    "Columns": [
+      {"Title": "2026 — 2019", "Paragraphs": ["Exposición Primavera 2026 Cajicá · Exposición, Colombia 2026. Mosaico “Cxacxa” en el centro cultural y de convenciones de Cajicá.", "Feria EVA 2025 Bogotá · Exposición, Colombia 2025. Mosaico “Hiska 1” en el espacio Home & Decor en el Parque de la 93, de Umbral galería.", "Inauguración de Museo Casa La Herrera Madrid · Exposición, Colombia 2019. Mosaico “Comunidad” en la sala de Identidades Madrileñas del Museo Casa La Herrera de Madrid."]},
+      {"Title": "2014 — 2012", "Paragraphs": ["Watermill Center Foundation New York · Exposición, USA 2014. Videoinstalación “Long Dream” en Watermill Center Foundation.", "Jolly Roger Bogotá · Publicación, Colombia 2012. Publicación de fotografías en el libro Jolly Roger editorial Taller 18."]},
+      {"Title": "2010", "Paragraphs": ["Cátedra UNESCO de Comunicación y Muestra “Ventanas 2010” Bogotá · Exposición, Colombia 2010. Cortometraje documental “Confianza”. Auditorio Marino Troncoso, Pontificia Universidad Javeriana.", "V Salón de Pintura, Escultura y Fotografía de Tenjo · Exposición, Colombia 2010. Serie fotográfica “Virgenes” y dibujos “Cadáveres”. V Salón de Pintura, Escultura y Fotografía. Templo Museo. Tenjo, Colombia. 16 de Julio a 20 de Septiembre, 2010.", "X Salón Javeriano de Artes Visuales Bogotá · Exposición, Colombia 2010. Cortometraje documental “Confianza”. Sala de exposiciones del Centro Cultural Gabriel Garcia Márquez."]}
+    ]
+  },
+  {
+    "ID": "experiencia", "Title": "Experiencia laboral", "Eyebrow": "Trayectoria", "Kind": "resume",
+    "Columns": [
+      {"Title": "Docencia & pedagogía", "Paragraphs": ["Universidad Nacional Bogotá · Evaluadora pruebas SER en Artes Plásticas, Colombia 2019. Agosto a Noviembre.", "Colsubsidio · Analista Pedagógica. Madrid, Colombia 2019. Escuelas de Formación en Artes. Componente “Plan de Fortalecimiento Cultural”. Febrero a Mayo.", "Colsubsidio · Docente. Bogotá, Colombia 2018. Docente de Artes: “Expresarte Lab”. Proyecto JEC “Jornada Escolar Complementaria”. Primaria a bachillerato. Febrero a Diciembre.", "Colsubsidio · Docente. Guaduas, Colombia 2017. Docente de inglés y Artes: “Arte para el Bilinguismo” Proyecto JEC “Jornada Escolar Complementaria”."]},
+      {"Title": "Arte & educación", "Paragraphs": ["Varietale Bogotá · Artista Colombia 2026–2017. Diseño y fabricación de mural en colaboración con el artista Juan Pablo Camacho. Realizado en madera y metal. Julio a Febrero.", "Colegio Vista Bella IED Bogotá · Docente, Colombia 2015. Docente de Artes en el Colegio Distrital “Vista Bella”. Grados sexto a once de bachillerato. Abril a Agosto."]},
+      {"Title": "Audiovisual & creación", "Paragraphs": ["Fotos-Hamptons New York · Videografa, USA 2013. Registro videográfico de bodas, bautizos, cumpleaños y eventos empresariales para marcas como Tec Itali. Marzo a Septiembre.", "Fundación Social Molano · Docente y Co-autora, Colombia 2009. Docente y Co-autora del taller “Espacio Creativo” para niños de diversas edades. Enero a Junio."]}
+    ]
+  },
+  {
+    "ID": "proyectos", "Title": "Portafolio de proyectos", "Eyebrow": "Obra seleccionada", "Kind": "divider",
+    "Quote": "Cada obra de arte es un mensaje que ha venido viajando en el tiempo y que se expresa para recordar una verdad",
+    "Images": [{"File": "page-08-image-045", "Alt": "Detalle de la obra de Tacy Borg"}]
+  },
+  {
+    "ID": "mosaicos", "Title": "Mosaicos simbólicos", "Eyebrow": "Primer proyecto", "Kind": "project",
+    "Images": [
+      {"File": "page-09-image-046", "Alt": "Mosaico simbólico en metal"},
+      {"File": "page-09-image-049", "Alt": "Detalle de los taches de un mosaico simbólico"}
+    ]
+  },
+  {
+    "ID": "chakana", "Title": "Chakana", "Eyebrow": "Mosaicos simbólicos / 2026", "Kind": "artwork",
+    "Images": [{"File": "page-10-image-052", "Alt": "Chakana, mosaico de píxel art en metal y madera", "Caption": "40,5 cm × 40,7 cm · Píxel art en metal y madera · 2026"}]
+  },
+  {
+    "ID": "cxacxa", "Title": "Cxacxa", "Eyebrow": "Mosaicos simbólicos / 2026", "Kind": "artwork story",
+    "Paragraphs": [
+      "La obra “Cxacxa” es un homenaje a la lengua indígena Nasa Yuwe, propia del pueblo Nasa, también conocido como Páez, que habita el departamento del Cauca, en Colombia, especialmente en la región de Tierradentro. La palabra Cxacxa posee un significado profundamente simbólico: fuerza.",
+      "La obra consiste en un mosaico experimental elaborado con taches adquiridos en el centro de Bogotá. El tache, un elemento que simboliza resistencia, ha sido adoptado desde la década de los setenta por diferentes subculturas urbanas que buscaron reapropiar los materiales industriales. Con él, reproduzco figuras en píxel art inspiradas en elementos de la cosmovisión del pueblo Nasa. Los colores rojo y verde representan la sangre de sus ancestros y la naturaleza de su territorio. En contraste, el plateado simboliza la tecnología, estableciendo un diálogo entre la memoria ancestral y el mundo contemporáneo.",
+      "En la actualidad se hablan 65 lenguas indígenas en Colombia y aproximadamente 800 lenguas indígenas en toda América. Al crear la obra “Cxacxa” en lengua Nasa Yuwe, busco celebrar la fuerza de su cultura y la presencia indígena en la cosmovisión del arte contemporáneo."
+    ],
+    "Images": [{"File": "page-11-image-055", "Alt": "Cxacxa, mosaico de taches rojos, verdes y plateados", "Caption": "31,5 cm × 70,7 cm · Píxel art en metal y madera · 2026"}]
+  },
+  {
+    "ID": "rupestres", "Title": "Rupestres", "Eyebrow": "Mosaicos simbólicos / 2026", "Kind": "artwork",
+    "Images": [
+      {"File": "page-12-image-058", "Alt": "Plateado rupestre", "Caption": "Plateado rupestre · 48,5 cm × 29,3 cm · Píxel art en metal y madera · 2026"},
+      {"File": "page-12-image-059", "Alt": "Verde rupestre", "Caption": "Verde rupestre · 30,5 cm × 29,5 cm · Píxel art en metal y madera · 2026"}
+    ]
+  },
+  {
+    "ID": "hischa", "Title": "Hischa 1", "Eyebrow": "Mosaicos simbólicos / 2025", "Kind": "artwork story",
+    "Paragraphs": ["La obra Hischa 1 significa la lengua muisca (muysc cubun), la palabra “hischa” (registrada en los manuscritos coloniales como hischá o hychá) significa “tierra”, “suelo” o “piso”."],
+    "Images": [{"File": "page-13-image-062", "Alt": "Hischa 1, mosaico en metal y madera", "Caption": "71 cm × 50 cm · Píxel art en metal y madera · 2025"}]
+  },
+  {
+    "ID": "comunidad", "Title": "Comunidad & arte deco", "Eyebrow": "Mosaicos simbólicos / 2021 — 2017", "Kind": "artwork",
+    "Images": [
+      {"File": "page-14-image-065", "Alt": "Comunidad, identidad y rupturas", "Caption": "Comunidad, identidad y rupturas · 218,3 cm × 122,1 cm · Píxel art en metal y madera · 2021"},
+      {"File": "page-14-image-066", "Alt": "Arte deco", "Caption": "Arte deco · 488 cm × 183 cm · Píxel art en metal y madera · 2017"}
+    ]
+  },
+  {
+    "ID": "historia-humana", "Title": "Historia humana", "Eyebrow": "Segundo proyecto", "Kind": "project",
+    "Images": [
+      {"File": "page-15-image-069", "Alt": "Obra del proyecto Historia humana"},
+      {"File": "page-15-image-070", "Alt": "Detalle del proyecto Historia humana"}
+    ]
+  },
+  {
+    "ID": "amados-monstruos", "Title": "Amados monstruos", "Eyebrow": "Tercer proyecto", "Kind": "project",
+    "Images": [
+      {"File": "page-16-image-071", "Alt": "Retrato del proyecto Amados monstruos"},
+      {"File": "page-16-image-080", "Alt": "Obra del proyecto Amados monstruos"}
+    ]
+  },
+  {
+    "ID": "genealogia", "Title": "Genealogía del silencio", "Eyebrow": "Cuarto proyecto", "Kind": "project",
+    "Images": [
+      {"File": "page-17-image-081", "Alt": "Retrato del proyecto Genealogía del silencio"},
+      {"File": "page-17-image-090", "Alt": "Obra del proyecto Genealogía del silencio"}
+    ]
+  },
+  {
+    "ID": "contacto", "Title": "Contacto", "Eyebrow": "Cajicá, Colombia", "Kind": "contact",
+    "Images": [{"File": "page-18-image-099", "Alt": "Código QR del perfil de Instagram de Tacy Borg"}]
+  }
+]

@@ -1,3 +1,14 @@
 src/static/output.css
 *.pdf
 .env
+*.zip
+
+# Private source artwork and local build products (keep backed up separately).
+/source-assets/
+/bin/
+/src/cyborgnerd
+/src/static/portfolio/page-*.png
+/src/static/portfolio/page-*.jpg
+
+__pycache__/
+*.py[cod]

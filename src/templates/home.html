@@ -1,28 +1,92 @@
 {{define "home"}}
 <!DOCTYPE html>
-<html lang="en" class="font-mono text-white bg-black">
-{{template "header" "Cyborgnerd"}}
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portafolio artístico de Tacy Borg. Memoria, identidad y mosaicos de píxel art en metal y madera. Cajicá, Colombia." />
+  <meta name="theme-color" content="#eeede3" />
+  <title>Tacy Borg — Portafolio artístico 2026</title>
+  <link rel="preload" href="/static/fonts/Pixelion-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/static/portfolio.css" />
+  <script src="/static/js/portfolio.js" defer></script>
+</head>
 <body>
-    <div id="root" class="flex flex-col justify-center items-center w-full min-h-[100dvh] text-center space-y-6">
-        <div class="max-w-[400px] m-4">
-            <img src="/static/img/Logo-animado-2.gif" />
-            <div hx-boost="true" class="flex justify-between space-x-4">
-                <a href="/artist-path"
-                    class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm">
-                    The Artist Path
-                </a>
-                <a href="/dev-path"
-                    class="w-full p-4 bg-gray-300 text-black border border-gray-500 shadow-[2px_2px_0_rgb(128,128,128)] hover:shadow-[4px_4px_0_rgb(64,64,64)] hover:border-gray-700 active:border-gray-400 active:shadow-[2px_2px_0_rgb(128,128,128)_inset] font-mono text-sm">
-                    The Dev Path
-                </a>
-            </div>
-            <div id="notification"
-                class="notification flex flex-row justify-center items-center m-4 p-4 text-xs bg-black text-neon-green shadow-neon font-press-start animate-pulse">
-                <!--hx-delete="/" hx-trigger="every 3s" hx-swap="delete" class="border text-white">
-                  !-->
-                <p>"Thanks for visiting us!"</p>
-            </div>
+  <a class="skip-link" href="#portfolio">Saltar al portafolio</a>
+  <main id="portfolio" tabindex="-1" aria-label="Portafolio artístico" aria-roledescription="carrusel" aria-describedby="portfolio-help">
+    {{range $index, $slide := .}}
+    <section id="{{.ID}}" class="slide {{.Kind}}" aria-labelledby="title-{{.ID}}" data-slide data-title="{{.Title}}" tabindex="-1">
+      <h1 id="title-{{.ID}}" class="sr-only">{{.Title}}</h1>
+      <div class="pdf-frame" aria-label="Página original con texto seleccionable">
+        <img class="pdf-background" src="/static/portfolio/pages/{{.Page.Background}}" alt="{{range $imageIndex, $image := .Images}}{{if $imageIndex}}. {{end}}{{.Alt}}{{end}}" loading="lazy" decoding="async" />
+        <div class="pdf-text-layer">
+          {{range .Page.Runs}}{{if .Href}}<a class="pdf-run font-{{.Font}}" href="{{.Href}}" data-pdf-width="{{.Width}}" style="left:{{.Left}}%;top:{{.Baseline}}%;--pdf-font-size:{{.Size}}cqw;--fit-x:{{.Fit}};color:{{.Color}}">{{.Text}}</a>{{else}}<span class="pdf-run font-{{.Font}}" data-pdf-width="{{.Width}}" style="left:{{.Left}}%;top:{{.Baseline}}%;--pdf-font-size:{{.Size}}cqw;--fit-x:{{.Fit}};color:{{.Color}}">{{.Text}}</span>{{end}}{{end}}
+        </div>
+      </div>
+      <div class="slide-inner reading-content">
+        <div class="slide-heading">
+          <p class="eyebrow">{{.Eyebrow}}</p>
+          <h1 aria-hidden="true">{{.Title}}</h1>
+        </div>
+        {{if .Paragraphs}}
+        <div class="prose">{{range .Paragraphs}}<p>{{.}}</p>{{end}}</div>
+        {{end}}
+        {{if .Columns}}
+        <div class="text-columns">
+          {{range .Columns}}
+          <div class="text-column"><h2>{{.Title}}</h2>{{range .Paragraphs}}<p>{{.}}</p>{{end}}</div>
+          {{end}}
+        </div>
+        {{end}}
+        {{if .Quote}}
+        <blockquote><p>“{{.Quote}}”</p><cite>Tacy Borg</cite></blockquote>
+        {{end}}
+        {{if .Images}}
+        <div class="image-grid" data-count="{{len .Images}}">
+          {{range .Images}}
+          <figure>
+            <a class="artwork-link" href="/static/portfolio/web/{{.File}}.webp" target="_blank" rel="noopener" aria-label="Ampliar imagen: {{.Alt}}">
+              <img src="/static/portfolio/web/{{.File}}.webp" alt="{{.Alt}}" loading="lazy" decoding="async" />
+            </a>
+            {{if .Caption}}<figcaption>{{.Caption}}</figcaption>{{end}}
+          </figure>
+          {{end}}
+        </div>
+        {{end}}
+        {{if eq .Kind "cover"}}
+        <a class="begin-link" href="#declaracion">Explorar el portafolio <span aria-hidden="true">→</span></a>
+        <p class="cover-location">Cajicá, Colombia <span aria-hidden="true">/</span> Artes visuales</p>
+        {{end}}
+        {{if eq .Kind "contact"}}
+        <address class="contact-details">
+          <div><span>Correo</span><a href="mailto:tacyborg@outlook.com">tacyborg@outlook.com ↗</a></div>
+          <div><span>Teléfono</span><a href="tel:+573016115264">+57 301 611 5264</a></div>
+          <div><span>Instagram</span><a href="https://www.instagram.com/tacyborg/" target="_blank" rel="noopener noreferrer">@tacyborg ↗</a></div>
+          <div><span>Ubicación</span><p>Cajicá, Colombia</p></div>
+        </address>
+        {{end}}
+      </div>
+    </section>
+    {{end}}
+  </main>
+  <p id="portfolio-help" class="sr-only">En computadora, haz clic en una imagen o en el fondo de la página para avanzar, o usa las flechas. El texto y los enlaces conservan su función. En vista ampliada o de lectura, los clics no cambian de página.</p>
+
+  <footer class="portfolio-controls" aria-label="Navegación del portafolio" hidden>
+    <div class="slide-status"><span id="slide-number">01</span><span class="counter-divider">/</span><span>{{len .}}</span><span id="slide-title">Tacy Borg</span></div>
+    <label class="section-select"><span class="sr-only">Ir a una sección</span>
+      <select id="section-select">{{range $index, $slide := .}}<option value="{{.ID}}">{{.Title}}</option>{{end}}</select>
+    </label>
+    <div class="view-controls">
+      <button id="toggle-reading" type="button" aria-pressed="false" title="Cambiar entre el diseño original y la vista de lectura">Lectura</button>
+      <button id="zoom-slide" type="button" aria-pressed="false" title="Ampliar la página para leer sus detalles">Ampliar <span aria-hidden="true">＋</span></button>
     </div>
+    <div class="arrow-controls">
+      <button id="previous-slide" type="button" aria-label="Diapositiva anterior"><span aria-hidden="true">←</span></button>
+      <button id="next-slide" type="button" aria-label="Diapositiva siguiente"><span aria-hidden="true">→</span></button>
+    </div>
+    <div class="progress-track" aria-hidden="true"><span id="slide-progress"></span></div>
+  </footer>
+  <p id="slide-announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
 </body>
 </html>
 {{end}}

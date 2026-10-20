@@ -2,7 +2,6 @@ package api
 
 import (
 	"context"
-	"fmt"
 	"html/template"
 	"io/fs"
 	"log/slog"
@@ -14,7 +13,7 @@ import (
 )
 
 type Server struct {
-	Tmpl *template.Template
+	Tmpl     *template.Template
 	StaticFS fs.FS
 }
 
@@ -29,40 +28,44 @@ func (s *Server) ToStandar(h HandlerWithError) http.HandlerFunc {
 	}
 }
 
-func (s *Server) Start(port string) {
+func (s *Server) Start(addr string) error {
 	srv := &http.Server{
-		Addr:         fmt.Sprintf(":%s", port),
-		Handler:      s.routes(port),
+		Addr:         addr,
+		Handler:      s.routes(),
 		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
 
+	quit, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
+	defer stop()
+	serverError := make(chan error, 1)
 	go func() {
-		slog.Info("Starting server", "port", port)
-		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			slog.Error("Server error", "error", err)
-		}
+		slog.Info("Starting server", "address", addr)
+		serverError <- srv.ListenAndServe()
 	}()
-
-	quit := make(chan os.Signal, 1)
-	signal.Notify(quit, os.Interrupt, syscall.SIGTERM)
-	<-quit
+	select {
+	case err := <-serverError:
+		if err != http.ErrServerClosed {
+			return err
+		}
+		return nil
+	case <-quit.Done():
+	}
 
 	slog.Info("Shutting down server...")
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
 	if err := srv.Shutdown(ctx); err != nil {
-		slog.Error("Server forced to shutdown", "error", err)
+		return err
 	}
 
 	slog.Info("Server exited cleanly")
+	return nil
 }
 
-
-
-func (s *Server) routes(port string) http.Handler {
+func (s *Server) routes() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", s.ToStandar(s.Hello))
 	mux.HandleFunc("/artist-path", s.ToStandar(s.ArtistPath))
@@ -70,9 +73,8 @@ func (s *Server) routes(port string) http.Handler {
 	mux.HandleFunc("/sketches", s.ToStandar(s.Sketches))
 	mux.HandleFunc("/assets", s.ToStandar(s.Assets))
 	mux.HandleFunc("/dev-path", s.ToStandar(s.DevPath))
-	
+
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.FS(s.StaticFS))))
-	fmt.Printf("Serving on http://localhost:%s\n", port)
 
 	return mux
 }

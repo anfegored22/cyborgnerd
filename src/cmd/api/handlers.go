@@ -6,7 +6,15 @@ import (
 )
 
 func (s *Server) Hello(w http.ResponseWriter, r *http.Request) error {
-	return s.Tmpl.ExecuteTemplate(w, "home", nil)
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return nil
+	}
+	slides, err := loadPortfolio()
+	if err != nil {
+		return err
+	}
+	return s.Tmpl.ExecuteTemplate(w, "home", slides)
 }
 
 func (s *Server) Construction(w http.ResponseWriter, r *http.Request) error {
