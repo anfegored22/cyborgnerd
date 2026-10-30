@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CyborgNerd — a personal corner of the web.">
+  <meta name="htmx-config" content='{"allowEval":false,"allowScriptTags":false,"selfRequestsOnly":true}'>
+  <title>{{.Title}} · CyborgNerd</title>
+  <link rel="stylesheet" href="/static/site.css">
+  <script src="/static/htmx.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header>
+    <a class="brand" href="/">cyborgnerd<span aria-hidden="true">_</span></a>
+    <p>A personal corner of the web.</p>
+  </header>
+  <main id="content" tabindex="-1">
+    <nav aria-label="Main" hx-boost="true" hx-target="#content" hx-select="#content" hx-swap="outerHTML show:top">
+      <a href="/" {{if eq .Path "/"}}aria-current="page"{{end}}>Home</a>
+      <a href="/about" {{if eq .Path "/about"}}aria-current="page"{{end}}>About</a>
+      <a href="/projects" {{if eq .Path "/projects"}}aria-current="page"{{end}}>Projects</a>
+    </nav>
+    {{if eq .Path "/"}}
+    <p class="eyebrow">Hello, world.</p>
+    <h1>CyborgNerd</h1>
+    <p>This is my personal site. A place for projects, notes, and things I’m exploring.</p>
+    <p>Just getting started. More soon.</p>
+    {{else if eq .Path "/about"}}
+    <p class="eyebrow">Behind the screen</p>
+    <h1>About</h1>
+    <p>This space is taking shape. A little more about me will live here soon.</p>
+    {{else}}
+    <p class="eyebrow">Work in progress</p>
+    <h1>Projects</h1>
+    <p>A home for things I’m building. Projects will appear here as they’re ready to share.</p>
+    {{end}}
+  </main>
+  <footer>Made with HTML + HTMX.</footer>
+</body>
+</html>

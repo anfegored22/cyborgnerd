@@ -1,99 +1,76 @@
-# CyborgNerd
+# CyborgNerd + Tacy Borg
 
-CyborgNerd is a Go web app featuring Tacy Borg's artistic portfolio, alongside the original art notes, sketches, and game assets.
-The app serves server-rendered HTML templates with embedded static files and Tailwind CSS styling.
+Two independent websites in one repository, hosted on the same AWS Lightsail VM.
 
-## Features
+| App | Domain | Local address | Stack |
+| --- | --- | --- | --- |
+| [`tacyborg/`](tacyborg/) | `www.tacyborg.com` | `127.0.0.1:8080` | Go, HTML templates, portfolio CSS/JS |
+| [`cyborgnerd/`](cyborgnerd/) | `www.cyborgnerd.com` | `127.0.0.1:8081` | Go, plain HTML/CSS + HTMX |
 
-- Server-rendered pages using Go templates
-- Embedded `templates/` and `static/` assets via `go:embed`
-- Gallery-style routes for art notes and sketches
-- Assets page for logos and animated sprites
-- Simple error fallback page for unfinished sections
+The artist portfolio previously under `src/` is now under `tacyborg/`, with its
+content and assets preserved. The new CyborgNerd app serves only the personal
+site; it has no portfolio routes or artwork assets.
 
-## Routes
+## Run locally
 
-- `/` - Tacy Borg portfolio carousel, with selectable text and original PDF layouts
-- `/artist-path` - Artist landing page
-- `/udemy-notes` - Udemy notes image gallery
-- `/sketches` - Sketches image gallery
-- `/assets` - Logos and animations
-- `/dev-path` - Placeholder route (currently returns an under-construction page)
+Go 1.23.2+ is required. In separate terminals:
 
-## Tech Stack
-
-- Go 1.23
-- Standard library `net/http` server
-- Go templates (`html/template`)
-- Tailwind CSS
-- HTMX (served from local static JS)
-
-## Project Layout
-
-```text
-.
-├── src/
-│   ├── cmd/api/           # HTTP server, handlers, route wiring
-│   ├── templates/         # HTML templates
-│   ├── static/            # CSS, JS, images, galleries
-│   ├── main.go            # App entrypoint
-│   └── Makefile           # Local dev/build commands
-├── deploy/                # Nginx + systemd configs and instance deployment guide
-├── bin/                   # Local compiled binaries (ignored)
-└── source-assets/         # Private original artwork and unused derivatives (ignored)
+```sh
+make -C tacyborg dev
 ```
 
-## Prerequisites
-
-- Go 1.23.2+
-- Optional: Tailwind CSS v3 CLI and forms/typography plugins for the older gallery pages
-
-## Run Locally
-
-From `src/`, start the app:
-
-```bash
-make dev
+```sh
+make -C cyborgnerd dev
 ```
 
-Then open `http://localhost:8080`. The portfolio does not need a CSS build.
-For the older gallery pages, run Tailwind in a second terminal:
+Both can run at once. `HTTP_ADDR` overrides an app's bind address. Templates and
+static assets are embedded, so restart after editing. Neither app needs a frontend
+build or npm installation. Tacy Borg's older gallery styles can optionally be
+regenerated with its existing Tailwind commands.
 
-```bash
-make tw
-```
+## Personal site
 
-The server binds to `127.0.0.1:8080` by default. Set `HTTP_ADDR` to override it.
-Templates and assets are embedded: restart the app after changing them.
+Edit `cyborgnerd/templates/page.html` for content and `cyborgnerd/static/site.css`
+for styling. Home, About and Projects are deliberately minimal starter pages;
+replace the placeholder copy with your own bio and projects.
 
-## Build
+HTMX is served locally at `/static/htmx.js` (the existing bundled 2.0.3 version).
+It enhances ordinary links by replacing the main content and updating browser
+history. Every page is also directly accessible and works without JavaScript.
+There is no custom application JavaScript, framework or Tailwind dependency.
 
-From `src/`:
+## Test and build
 
-```bash
+From the repository root:
+
+```sh
 make test
-make binary
+GOOS=linux GOARCH=amd64 make binary
 ```
 
-The binary is written to `bin/cyborgnerd` at the repository root. It embeds runtime
-assets and does not require the original artwork, PDF, or font purchase archive.
-`make build` additionally generates the optional legacy Tailwind CSS first.
+Outputs: `bin/tacyborg` and `bin/cyborgnerd`. Each app is a separate Go module;
+use `make test` at the root or `go test ./...` inside an app directory.
+
+With both local servers running and Playwright installed, optional browser checks:
+
+```sh
+NODE_PATH=/tmp/opencode/portfolio-browser/node_modules node tacyborg/tools/check_portfolio.cjs
+NODE_PATH=/tmp/opencode/portfolio-browser/node_modules node cyborgnerd/tools/check_site.cjs
+```
+
+See `tacyborg/PORTFOLIO.md` for Playwright installation. Override `PORTFOLIO_URL`
+or `CYBORGNERD_URL` to check a different local address.
 
 ## Deployment
 
-Run the executable directly on a Linux instance, supervised by **systemd**, behind
-**Nginx** with HTTPS from Certbot. No containers are used.
+Nginx routes the domains to separate loopback ports. Each app has its own systemd
+service, OS user and install directory. Updates and restarts are independent.
+See [deploy/README.md](deploy/README.md) for the **one-time production migration**,
+backups, checks and rollback. Repository setup alone does not change production.
 
-See [deploy/README.md](deploy/README.md) for installation, DNS/TLS setup, updates,
-rollback, and logs. Configuration files are included under `deploy/`.
+## Private assets
 
-## Asset tracking
-
-Commit the optimized WebP files, webfonts (subject to their license), templates,
-content and tooling. Do not commit compiled executables, original extractions,
-source PDFs or purchase archives. Keep ignored source assets backed up separately:
-**being ignored by Git is not a backup**.
-
-The extracted originals are preserved under `source-assets/portfolio/`, outside
-the embedded public files. Unused WebP derivatives are in its `unused-web/` folder.
-For asset regeneration and portfolio details, see [src/PORTFOLIO.md](src/PORTFOLIO.md).
+`source-assets/`, original PDFs, purchase ZIPs and binaries are ignored. Keep
+private source material backed up separately. Runtime portfolio assets remain
+inside `tacyborg/static/`. See [tacyborg/PORTFOLIO.md](tacyborg/PORTFOLIO.md) for
+portfolio content, fonts, regeneration and browser checks.

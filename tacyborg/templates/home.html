@@ -1,0 +1,91 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html lang="{{.Language}}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{.Text.Description}}" />
+  <meta name="theme-color" content="#eeede3" />
+  <title>{{.Text.PageTitle}}</title>
+  <link rel="canonical" href="{{.Canonical}}" />
+  <link rel="alternate" hreflang="es" href="https://www.tacyborg.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.tacyborg.com/en" />
+  <link rel="alternate" hreflang="x-default" href="https://www.tacyborg.com/" />
+  <link rel="preload" href="/static/fonts/Pixelion-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="{{.StyleURL}}" />
+  <script src="{{.ScriptURL}}" defer></script>
+</head>
+<body class="reading-view" data-of="{{.Text.Of}}">
+  <a class="skip-link" href="#portfolio">{{.Text.Skip}}</a>
+  <main id="portfolio" tabindex="-1" aria-label="{{.Text.Portfolio}}" aria-describedby="portfolio-help">
+    {{range $index, $slide := .Slides}}
+    <section id="{{.ID}}" class="slide {{.Kind}}" aria-labelledby="title-{{.ID}}" data-slide data-title="{{.Title}}" tabindex="-1">
+      <h1 id="title-{{.ID}}" class="sr-only">{{.Title}}</h1>
+      <div class="slide-inner reading-content">
+        <div class="slide-heading">
+          <p class="eyebrow">{{.Eyebrow}}</p>
+          <h1 aria-hidden="true">{{.Title}}</h1>
+        </div>
+        {{if .Paragraphs}}
+        <div class="prose">{{range .Paragraphs}}<p>{{.}}</p>{{end}}</div>
+        {{end}}
+        {{if .Columns}}
+        <div class="text-columns">
+          {{range .Columns}}
+          <div class="text-column"><h2>{{.Title}}</h2>{{range .Paragraphs}}<p>{{.}}</p>{{end}}</div>
+          {{end}}
+        </div>
+        {{end}}
+        {{if .Quote}}
+        <blockquote><p>“{{.Quote}}”</p><cite>Tacy Borg</cite></blockquote>
+        {{end}}
+        {{if .Images}}
+        <div class="image-grid" data-count="{{len .Images}}">
+          {{range .Images}}
+          <figure>
+            {{if eq .File "page-15-image-070"}}
+            <iframe class="documentary-player" src="https://www.youtube-nocookie.com/embed/G9VE13QZeps?start=15" title="{{$.Text.Documentary}}" width="643" height="362" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            <p class="documentary-link"><a href="https://www.youtube.com/watch?v=G9VE13QZeps&amp;t=15s" target="_blank" rel="noopener noreferrer">{{$.Text.WatchDocumentary}} ↗</a></p>
+            {{else}}
+            <img src="/static/portfolio/web/{{.File}}.webp" alt="{{.Alt}}" width="{{.Width}}" height="{{.Height}}" {{if eq $index 0}}loading="eager" fetchpriority="high"{{else}}loading="lazy"{{end}} decoding="async" />
+            {{end}}
+            {{if .Caption}}<figcaption>{{.Caption}}</figcaption>{{end}}
+          </figure>
+          {{end}}
+        </div>
+        {{end}}
+        {{if eq .Kind "cover"}}
+        <a class="begin-link" href="#declaracion">{{$.Text.Explore}} <span aria-hidden="true">→</span></a>
+        <p class="cover-location">Cajicá, Colombia <span aria-hidden="true">/</span> {{$.Text.VisualArts}}</p>
+        {{end}}
+        {{if eq .Kind "contact"}}
+        <address class="contact-details">
+          <div><span>{{$.Text.Email}}</span><a href="mailto:tacyborg@outlook.com">tacyborg@outlook.com ↗</a></div>
+          <div><span>{{$.Text.Phone}}</span><a href="tel:+573016115264">+57 301 611 5264</a></div>
+          <div><span>Instagram</span><a href="https://www.instagram.com/tacyborg/" target="_blank" rel="noopener noreferrer">@tacyborg ↗</a></div>
+          <div><span>{{$.Text.Location}}</span><p>Cajicá, Colombia</p></div>
+        </address>
+        {{end}}
+      </div>
+    </section>
+    {{end}}
+  </main>
+  <p id="portfolio-help" class="sr-only">{{.Text.Help}}</p>
+
+  <div class="portfolio-tools">
+  <a id="language-switch" class="language-switch" href="{{.OtherURL}}" data-base="{{.OtherURL}}" lang="{{.OtherLang}}" hreflang="{{.OtherLang}}" aria-label="{{.Text.LanguageLabel}}">{{.OtherCode}}</a>
+  <details class="portfolio-menu" hidden>
+    <summary aria-label="{{.Text.OptionsLabel}}">{{.Text.Options}} <span class="page-counter" aria-hidden="true"><span id="slide-number">01</span> / {{len .Slides}}</span><span aria-hidden="true">☰</span></summary>
+    <div class="menu-panel">
+      <p id="slide-title" class="menu-title">Tacy Borg</p>
+      <label class="section-select">{{.Text.Sections}}
+        <select id="section-select">{{range .Slides}}<option value="{{.ID}}">{{.Title}}</option>{{end}}</select>
+      </label>
+      <p class="menu-hint">{{.Text.HintVertical}}</p>
+    </div>
+  </details>
+  </div>
+  <p id="slide-announcement" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+</body>
+</html>
+{{end}}

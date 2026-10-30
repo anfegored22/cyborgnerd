@@ -1,0 +1,127 @@
+[
+  {
+    "ID": "portafolio", "Title": "Tacy Borg", "Eyebrow": "Artistic Portfolio 2026", "Kind": "cover",
+    "Paragraphs": ["Portfolio"]
+  },
+  {
+    "ID": "declaracion", "Title": "Artist Statement", "Eyebrow": "The artist", "Kind": "statement",
+    "Paragraphs": [
+      "An artist's craft is to take risks: to surrender to the unfolding of the material and approach a knowledge that arrives across multiple times—past, present and future. Each pixel-art mosaic is handmade, using a language of craft and technology to explore the emotions, intuitions and mental journeys of a human system governed by a digital world. I attach colored metal studs to a wooden base, folding them beforehand to make assembly easier. Each stud acts as a unit of color that combines with the others to form spirals, bodies, lines, circles and the other shapes that make up the finished piece.",
+      "Tacy Borg is the artist name created for this project. It joins two essential parts of its message: “Ta”, a syllable from Natalia (the human, imperfect, traumatized), and “cy borg”, meaning cybernetic organism (the sophisticated, divine, transhuman). Ultimately, this entire body of work is the expression of an organism adapting to an environment conceived at a higher level."
+    ],
+    "Images": [{"File": "page-02-image-008", "Width": 1161, "Height": 1296, "Alt": "Portrait of Tacy Borg"}]
+  },
+  {
+    "ID": "semblanza", "Title": "Biography", "Eyebrow": "The artist", "Kind": "biography",
+    "Paragraphs": ["Tacy Borg (Medellín, 1988) is a contemporary artist who graduated in Visual Arts from Pontificia Universidad Javeriana in Bogotá, specializing in audiovisual practice. Her work investigates identity and memory, and their convergence through the materials she uses. Precious and industrial metals, wood and paper, alongside photography and video, are central to her current practice. She has exhibited nationally and internationally, including the Primavera 2026 exhibition of Colombian artists, the Watermill Center Foundation in New York in 2013, and the national student exhibition of the UNESCO Chair in Communication and Ventanas 2010."]
+  },
+  {
+    "ID": "investigacion", "Title": "Research Lines", "Eyebrow": "Memory / Identity / Material", "Kind": "text",
+    "Columns": [
+      {"Title": "Conceptual research", "Paragraphs": ["Memory and identity. An exploration of family memories, cultural inheritance, decolonization and the construction of the self through portraiture."]},
+      {"Title": "Technical research", "Paragraphs": ["The artist creates small-format pieces in precious metals and mosaics in hand-painted industrial metals. Her handmade jewelry practice includes piercing, soldering, weaving, chasing, casting and other techniques. She also develops her drawing in graphite and charcoal, watercolor painting, experimental analog photography, video installation and experimental documentary video."]}
+    ]
+  },
+  {
+    "ID": "curriculum", "Title": "Curriculum Vitae", "Eyebrow": "Background", "Kind": "resume",
+    "Columns": [
+      {"Title": "Profile", "Paragraphs": ["Visual artist with international recognition for the creation of artistic projects. Experience in teaching and content creation, with knowledge of sculpture, jewelry, photography, video, drawing and painting. Skilled in Final Cut Pro, Adobe Premiere and Photoshop, pedagogical analysis and the design of academic arts programs. Strengths include creativity, innovation and teamwork."]},
+      {"Title": "Education", "Paragraphs": ["Pontificia Universidad Javeriana, Bogotá · Visual Arts, Colombia · 2006–2011", "La Mana, Tabio · Jewelry workshop, Colombia · 2008–2011", "Fundación Gilberto Álzate Avendaño and Plataforma Bogotá · “Hecho en casa o garaje” workshop, Colombia 2010", "Escuela de Artes y Oficios Santo Domingo, Bogotá · Metal casting workshop, Colombia 2011", "Escuela de Periodismo Multimedia El Tiempo, Bogotá · “Latest Trends in Photography with the Experts at EL TIEMPO” workshop, Colombia 2016"]},
+      {"Title": "Awards", "Paragraphs": ["Watermill Center Foundation, New York · “Laboratorio Artistas Unidos” residency · United States 2013"]}
+    ]
+  },
+  {
+    "ID": "exposiciones", "Title": "Exhibitions & Publications", "Eyebrow": "Background", "Kind": "resume",
+    "Columns": [
+      {"Title": "2026 — 2019", "Paragraphs": ["Primavera 2026 Exhibition, Cajicá · Exhibition, Colombia 2026. The mosaic “Cxacxa” at the Cajicá Cultural and Convention Center.", "Feria EVA 2025, Bogotá · Exhibition, Colombia 2025. The mosaic “Hiska 1” in Umbral Gallery's Home & Decor space at Parque de la 93.", "Opening of Museo Casa La Herrera, Madrid · Exhibition, Colombia 2019. The mosaic “Comunidad” in the museum's Identidades Madrileñas room."]},
+      {"Title": "2014 — 2012", "Paragraphs": ["Watermill Center Foundation, New York · Exhibition, USA 2014. The video installation “Long Dream” at the Watermill Center Foundation.", "Jolly Roger, Bogotá · Publication, Colombia 2012. Photographs published in Jolly Roger, by Taller 18."]},
+      {"Title": "2010", "Paragraphs": ["UNESCO Chair in Communication and Ventanas 2010, Bogotá · Exhibition, Colombia 2010. The documentary short film “Confianza” at the Marino Troncoso Auditorium, Pontificia Universidad Javeriana.", "Fifth Tenjo Salon of Painting, Sculpture and Photography · Exhibition, Colombia 2010. The photographic series “Virgenes” and drawings “Cadáveres” at Templo Museo, Tenjo, Colombia. July 16–September 20, 2010.", "Tenth Javeriano Visual Arts Salon, Bogotá · Exhibition, Colombia 2010. The documentary short film “Confianza” at the Gabriel García Márquez Cultural Center exhibition hall."]}
+    ]
+  },
+  {
+    "ID": "experiencia", "Title": "Work Experience", "Eyebrow": "Background", "Kind": "resume",
+    "Columns": [
+      {"Title": "Teaching & pedagogy", "Paragraphs": ["Universidad Nacional, Bogotá · SER visual arts assessment evaluator, Colombia 2019. August–November.", "Colsubsidio · Pedagogical analyst, Madrid, Colombia 2019. Arts training schools, “Plan de Fortalecimiento Cultural” program. February–May.", "Colsubsidio · Teacher, Bogotá, Colombia 2018. Arts teacher for “Expresarte Lab”, part of JEC, the extended school day program. Primary through secondary school. February–December.", "Colsubsidio · Teacher, Guaduas, Colombia 2017. English and arts teacher for “Arte para el Bilinguismo”, part of the JEC extended school day program."]},
+      {"Title": "Art & education", "Paragraphs": ["Varietale, Bogotá · Artist, Colombia 2026–2017. Design and fabrication of a wood and metal mural in collaboration with artist Juan Pablo Camacho. July–February.", "Colegio Vista Bella IED, Bogotá · Teacher, Colombia 2015. Arts teacher for secondary grades six through eleven. April–August."]},
+      {"Title": "Audiovisual & creative work", "Paragraphs": ["Fotos-Hamptons, New York · Videographer, USA 2013. Video documentation of weddings, baptisms, birthdays and corporate events for brands including Tec Itali. March–September.", "Fundación Social Molano · Teacher and co-author, Colombia 2009. Teacher and co-author of “Espacio Creativo”, a workshop for children of different ages. January–June."]}
+    ]
+  },
+  {
+    "ID": "proyectos", "Title": "Project Portfolio", "Eyebrow": "Selected work", "Kind": "divider",
+    "Quote": "Every work of art is a message that has traveled through time and finds expression to remind us of a truth",
+    "Images": [{"File": "page-08-image-045", "Width": 1578, "Height": 499, "Alt": "Detail from Tacy Borg's work"}]
+  },
+  {
+    "ID": "mosaicos", "Title": "Symbolic Mosaics", "Eyebrow": "First project", "Kind": "project",
+    "Images": [
+      {"File": "page-09-image-046", "Width": 800, "Height": 796, "Alt": "Symbolic mosaic made with metal studs"},
+      {"File": "page-09-image-049", "Width": 1600, "Height": 709, "Alt": "Close-up of the metal studs in a symbolic mosaic"}
+    ]
+  },
+  {
+    "ID": "chakana", "Title": "Chakana", "Eyebrow": "Symbolic mosaics / 2026", "Kind": "artwork",
+    "Images": [{"File": "page-10-image-052", "Width": 1600, "Height": 1591, "Alt": "Chakana, a metal and wood pixel-art mosaic", "Caption": "40.5 cm × 40.7 cm · Pixel art in metal and wood · 2026"}]
+  },
+  {
+    "ID": "cxacxa", "Title": "Cxacxa", "Eyebrow": "Symbolic mosaics / 2026", "Kind": "artwork story",
+    "Paragraphs": [
+      "“Cxacxa” pays tribute to Nasa Yuwe, the language of the Nasa people, also known as the Páez, who live in Colombia's Cauca department, especially the Tierradentro region. Cxacxa is a word with a deeply symbolic meaning: strength.",
+      "This experimental mosaic is made with metal studs bought in central Bogotá. A symbol of resistance, the stud has been embraced since the 1970s by urban subcultures seeking to reclaim industrial materials. I use it to create pixel-art figures inspired by the Nasa worldview. Red and green represent the blood of their ancestors and the natural world of their territory. Silver, by contrast, symbolizes technology, creating a dialogue between ancestral memory and the contemporary world.",
+      "Today, 65 Indigenous languages are spoken in Colombia and approximately 800 throughout the Americas. By creating “Cxacxa” in Nasa Yuwe, I seek to celebrate the strength of Nasa culture and the Indigenous presence within the worldview of contemporary art."
+    ],
+    "Images": [{"File": "page-11-image-055", "Width": 1600, "Height": 709, "Alt": "Cxacxa, a mosaic of red, green and silver metal studs", "Caption": "31.5 cm × 70.7 cm · Pixel art in metal and wood · 2026"}]
+  },
+  {
+    "ID": "rupestres", "Title": "Rock Art", "Eyebrow": "Symbolic mosaics / 2026", "Kind": "artwork",
+    "Images": [
+      {"File": "page-12-image-058", "Width": 836, "Height": 1362, "Alt": "Plateado rupestre, a silver metal-stud mosaic", "Caption": "Plateado rupestre · 48.5 cm × 29.3 cm · Pixel art in metal and wood · 2026"},
+      {"File": "page-12-image-059", "Width": 640, "Height": 617, "Alt": "Verde rupestre, a green and red metal-stud mosaic", "Caption": "Verde rupestre · 30.5 cm × 29.5 cm · Pixel art in metal and wood · 2026"}
+    ]
+  },
+  {
+    "ID": "hischa", "Title": "Hischa 1", "Eyebrow": "Symbolic mosaics / 2025", "Kind": "artwork story",
+    "Paragraphs": ["The title Hischa 1 comes from the Muisca language, Muysc Cubun. The word “hischa”, recorded in colonial manuscripts as hischá or hychá, means “earth”, “ground” or “floor”."],
+    "Images": [{"File": "page-13-image-062", "Width": 1133, "Height": 1599, "Alt": "Hischa 1, a metal and wood mosaic", "Caption": "71 cm × 50 cm · Pixel art in metal and wood · 2025"}]
+  },
+  {
+    "ID": "comunidad", "Title": "Community & Art Deco", "Eyebrow": "Symbolic mosaics / 2021 — 2017", "Kind": "artwork",
+    "Images": [
+      {"File": "page-14-image-065", "Width": 417, "Height": 600, "Alt": "Comunidad, identidad y rupturas", "Caption": "Comunidad, identidad y rupturas · 218.3 cm × 122.1 cm · Pixel art in metal and wood · 2021"},
+      {"File": "page-14-image-066", "Width": 567, "Height": 270, "Alt": "Arte deco, a large wood and metal mural", "Caption": "Arte deco · 488 cm × 183 cm · Pixel art in metal and wood · 2017"}
+    ]
+  },
+  {
+    "ID": "historia-humana", "Title": "Human History", "Eyebrow": "Second project", "Kind": "project",
+    "Images": [
+      {"File": "page-15-image-069", "Width": 300, "Height": 122, "Alt": "Work from the Human History project"},
+      {"File": "page-15-image-070", "Width": 643, "Height": 473, "Alt": "Detail from the Human History project"}
+    ]
+  },
+  {
+    "ID": "amados-monstruos", "Title": "Beloved Monsters", "Eyebrow": "Third project", "Kind": "project",
+    "Images": [
+      {"File": "page-16-image-071", "Width": 941, "Height": 1109, "Alt": "Portrait from the Beloved Monsters project"},
+      {"File": "page-16-image-080", "Width": 1031, "Height": 1461, "Alt": "Painting from the Beloved Monsters project"}
+    ]
+  },
+  {
+    "ID": "genealogia", "Title": "Genealogy of Silence", "Eyebrow": "Fourth project", "Kind": "project",
+    "Images": [
+      {"File": "page-17-image-081", "Width": 931, "Height": 1280, "Alt": "Virgen del Carmen, hand-painted black-and-white photograph", "Caption": "Virgen del Carmen · Hand-painted black-and-white photography · 66 cm × 48 cm · 2010"},
+      {"File": "genealogia-espejo", "Width": 1379, "Height": 1600, "Alt": "Espejo, black-and-white photograph", "Caption": "Espejo · Black-and-white photography · 100 cm × 86 cm · 2008"},
+      {"File": "genealogia-leticia", "Width": 1600, "Height": 1323, "Alt": "Leticia, black-and-white photograph", "Caption": "Leticia · Black-and-white photography · 60 cm × 50 cm · 2008"},
+      {"File": "genealogia-sin-titulo-2008", "Width": 1600, "Height": 1304, "Alt": "Sin título, black-and-white photograph from 2008", "Caption": "Sin título · Black-and-white photography · 60 cm × 50 cm · 2008"},
+      {"File": "genealogia-la-rosa", "Width": 1600, "Height": 994, "Alt": "La Rosa, black-and-white photograph", "Caption": "La Rosa · Black-and-white photography · 24 cm × 14 cm · 2008"},
+      {"File": "genealogia-sin-titulo-2009", "Width": 1120, "Height": 1600, "Alt": "Sin título, black-and-white photograph with color from 2009", "Caption": "Sin título · Black-and-white photography with color · 100 cm × 70 cm · 2009"},
+      {"File": "genealogia-abuela", "Width": 1069, "Height": 1600, "Alt": "Abuela, black-and-white photograph", "Caption": "Abuela · Black-and-white photography · 25 cm × 17 cm · 2009"},
+      {"File": "genealogia-abuela-no-sufras", "Width": 1075, "Height": 1600, "Alt": "Abuela, no sufras, black-and-white photograph", "Caption": "Abuela, no sufras · Black-and-white photography · 25 cm × 17 cm · 2009"},
+      {"File": "genealogia-sin-nombre", "Width": 1600, "Height": 1079, "Alt": "Sin nombre, black-and-white photograph", "Caption": "Sin nombre · Black-and-white photography · 48 cm × 33 cm · 2007"},
+      {"File": "genealogia-de-cama", "Width": 1600, "Height": 1077, "Alt": "De cama, black-and-white photograph", "Caption": "De cama · Black-and-white photography · 47 cm × 30 cm · 2008"},
+      {"File": "genealogia-el-barrio", "Width": 969, "Height": 1600, "Alt": "El barrio, black-and-white photograph", "Caption": "El barrio · Black-and-white photography · 48 cm × 29 cm · 2008"}
+    ]
+  },
+  {
+    "ID": "contacto", "Title": "Contact", "Eyebrow": "Cajicá, Colombia", "Kind": "contact",
+    "Images": [{"File": "page-18-image-099", "Width": 857, "Height": 850, "Alt": "QR code for Tacy Borg's Instagram profile"}]
+  }
+]

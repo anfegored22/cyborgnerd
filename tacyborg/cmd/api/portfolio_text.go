@@ -1,0 +1,41 @@
+package api
+
+// UI strings are rendered into HTML/data attributes, not interpolated into JS.
+var portfolioText = map[string]map[string]string{
+	"es": {
+		"PageTitle":   "Tacy Borg — Portafolio artístico 2026",
+		"Description": "Portafolio artístico de Tacy Borg. Memoria, identidad y mosaicos de píxel art en metal y madera. Cajicá, Colombia.",
+		"Skip":        "Saltar al portafolio", "Portfolio": "Portafolio artístico", "OriginalPage": "Página original con texto seleccionable",
+		"ExpandImage": "Ampliar imagen", "Explore": "Explorar el portafolio", "VisualArts": "Artes visuales",
+		"Email": "Correo", "Phone": "Teléfono", "Location": "Ubicación",
+		"Help":             "Desplázate hacia abajo para explorar el portafolio. Usa el menú flotante para ir a una sección.",
+		"Documentary":      "Documental de Historia humana",
+		"WatchDocumentary": "Ver el documental en YouTube",
+		"OptionsLabel":     "Opciones del portafolio", "Options": "Opciones", "Sections": "Ir a una sección",
+		"Reading": "Lectura", "ReadingOnTitle": "Volver al diseño original del PDF", "ReadingOffTitle": "Adaptar el texto para leer cómodamente",
+		"ZoomIn": "Ampliar", "ZoomOut": "Ajustar", "ZoomTitle": "Ampliar la página para leer sus detalles",
+		"HintInitial":    "Desplázate para explorar el portafolio.",
+		"HintReading":    "Texto adaptado a tu pantalla. Desactiva Lectura para ver el PDF original.",
+		"HintZoom":       "Desplázate para recorrer la página ampliada.",
+		"HintHorizontal": "Desplázate a los lados o usa la rueda del ratón.", "HintVertical": "Desplázate hacia abajo para continuar.",
+		"Of": "de", "LanguageLabel": "Leer en inglés",
+	},
+	"en": {
+		"PageTitle":   "Tacy Borg — Artistic Portfolio 2026",
+		"Description": "Tacy Borg's artistic portfolio. Memory, identity and pixel-art mosaics in metal and wood. Cajicá, Colombia.",
+		"Skip":        "Skip to portfolio", "Portfolio": "Artistic portfolio", "OriginalPage": "Original layout with selectable text",
+		"ExpandImage": "Enlarge image", "Explore": "Explore the portfolio", "VisualArts": "Visual arts",
+		"Email": "Email", "Phone": "Phone", "Location": "Location",
+		"Help":             "Scroll down to explore the portfolio. Use the floating menu to jump to a section.",
+		"Documentary":      "Human History documentary",
+		"WatchDocumentary": "Watch the documentary on YouTube",
+		"OptionsLabel":     "Portfolio options", "Options": "Options", "Sections": "Go to a section",
+		"Reading": "Reading", "ReadingOnTitle": "Return to the original PDF layout", "ReadingOffTitle": "Adapt the text for comfortable reading",
+		"ZoomIn": "Enlarge", "ZoomOut": "Fit page", "ZoomTitle": "Enlarge the page to see its details",
+		"HintInitial":    "Scroll to explore the portfolio.",
+		"HintReading":    "Text adapted to your screen. Turn off Reading to see the original layout.",
+		"HintZoom":       "Scroll to explore the enlarged page.",
+		"HintHorizontal": "Scroll sideways or use the mouse wheel.", "HintVertical": "Scroll down to continue.",
+		"Of": "of", "LanguageLabel": "Read in Spanish",
+	},
+}

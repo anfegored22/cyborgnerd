@@ -1,4 +1,4 @@
-src/static/output.css
+tacyborg/static/output.css
 *.pdf
 .env
 *.zip
@@ -6,9 +6,11 @@ src/static/output.css
 # Private source artwork and local build products (keep backed up separately).
 /source-assets/
 /bin/
-/src/cyborgnerd
-/src/static/portfolio/page-*.png
-/src/static/portfolio/page-*.jpg
+/tacyborg/cyborgnerd
+/tacyborg/tacyborg
+/cyborgnerd/cyborgnerd
+/tacyborg/static/portfolio/page-*.png
+/tacyborg/static/portfolio/page-*.jpg
 
 __pycache__/
 *.py[cod]
